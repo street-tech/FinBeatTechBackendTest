@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskManager.Api</name>
+    </assembly>
+    <members>
+        <member name="T:TaskManager.Api.Controllers.TasksController">
+            <summary>
+            API endpoints for managing tasks.
+            </summary>
+        </member>
+        <member name="M:TaskManager.Api.Controllers.TasksController.CreateTask(TaskManager.Application.DTOs.CreateTaskDto)">
+            <summary>
+            Creates a new task.
+            </summary>
+            <param name="createTaskDto">The data for the new task.</param>
+            <returns>The created task.</returns>
+            <response code="201">Returns the newly created task.</response>
+            <response code="400">If the item is null or invalid.</response>
+        </member>
+        <member name="M:TaskManager.Api.Controllers.TasksController.GetTaskById(System.Int32)">
+            <summary>
+            Gets a specific task by its ID.
+            </summary>
+            <param name="id">The ID of the task to retrieve.</param>
+            <returns>The requested task.</returns>
+            <response code="200">Returns the requested task.</response>
+            <response code="404">If the task with the specified ID is not found.</response>
+        </member>
+        <member name="M:TaskManager.Api.Controllers.TasksController.GetAllTasks">
+            <summary>
+            Gets all tasks.
+            </summary>
+            <returns>A list of all tasks.</returns>
+            <response code="200">Returns a list of tasks.</response>
+        </member>
+        <member name="M:TaskManager.Api.Controllers.TasksController.UpdateTask(System.Int32,TaskManager.Application.DTOs.UpdateTaskDto)">
+            <summary>
+            Updates an existing task.
+            </summary>
+            <param name="id">The ID of the task to update.</param>
+            <param name="updateTaskDto">The updated task data.</param>
+            <returns>No content if successful.</returns>
+            <response code="204">If the update was successful.</response>
+            <response code="400">If the provided data is invalid.</response>
+            <response code="404">If the task with the specified ID is not found.</response>
+        </member>
+        <member name="M:TaskManager.Api.Controllers.TasksController.DeleteTask(System.Int32)">
+            <summary>
+            Deletes a task by its ID.
+            </summary>
+            <param name="id">The ID of the task to delete.</param>
+            <returns>No content if successful.</returns>
+            <response code="204">If the deletion was successful.</response>
+            <response code="404">If the task with the specified ID is not found.</response>
+        </member>
+    </members>
+</doc>

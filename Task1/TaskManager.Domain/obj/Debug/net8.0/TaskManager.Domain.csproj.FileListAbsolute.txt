@@ -1,0 +1,14 @@
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\bin\Debug\net8.0\TaskManager.Domain.deps.json
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\bin\Debug\net8.0\TaskManager.Domain.dll
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\bin\Debug\net8.0\TaskManager.Domain.pdb
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\bin\Debug\net8.0\TaskManager.Domain.xml
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.AssemblyInfoInputs.cache
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.AssemblyInfo.cs
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.csproj.CoreCompileInputs.cache
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.sourcelink.json
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.dll
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\obj\Debug\net8.0\refint\TaskManager.Domain.dll
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.xml
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.pdb
+C:\wok\FinBeatTechBackendTest\Task1\TaskManager.Domain\obj\Debug\net8.0\ref\TaskManager.Domain.dll

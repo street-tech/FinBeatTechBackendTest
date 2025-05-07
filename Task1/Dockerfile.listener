@@ -1,0 +1,24 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+COPY Task1.sln .
+COPY TaskEventListener/*.csproj ./TaskEventListener/
+COPY TaskManager.Infrastructure/*.csproj ./TaskManager.Infrastructure/
+COPY TaskManager.Application/*.csproj ./TaskManager.Application/
+COPY TaskManager.Domain/*.csproj ./TaskManager.Domain/
+COPY TaskManager.Api/*.csproj ./TaskManager.Api/
+COPY TaskManager.Tests/*.csproj ./TaskManager.Tests/
+COPY TaskEventListener.Tests/*.csproj ./TaskEventListener.Tests/
+
+RUN dotnet restore Task1.sln
+
+COPY . .
+WORKDIR "/src/TaskEventListener"
+
+RUN dotnet publish TaskEventListener.csproj -c Release -o /app/publish --no-restore
+
+FROM mcr.microsoft.com/dotnet/runtime:8.0 AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+
+ENTRYPOINT ["dotnet", "TaskEventListener.dll"]

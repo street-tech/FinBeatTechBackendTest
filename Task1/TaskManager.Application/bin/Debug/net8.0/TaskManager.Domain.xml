@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskManager.Domain</name>
+    </assembly>
+    <members>
+        <member name="P:TaskManager.Domain.Entities.TaskItem.Id">
+            <summary>
+            Unique identifier for the task.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Domain.Entities.TaskItem.Title">
+            <summary>
+            The title or name of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Domain.Entities.TaskItem.Description">
+            <summary>
+            A detailed description of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Domain.Entities.TaskItem.ItemStatus">
+            <summary>
+            The current status of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Domain.Entities.TaskItem.CreatedAt">
+            <summary>
+            The date and time when the task was created (UTC).
+            </summary>
+        </member>
+        <member name="P:TaskManager.Domain.Entities.TaskItem.UpdatedAt">
+            <summary>
+            The date and time when the task was last updated (UTC).
+            </summary>
+        </member>
+        <member name="T:TaskManager.Domain.Enums.TaskItemStatus">
+            <summary>
+            Represents the status of a task.
+            </summary>
+        </member>
+        <member name="F:TaskManager.Domain.Enums.TaskItemStatus.New">
+            <summary>
+            The task is new and has not been started.
+            </summary>
+        </member>
+        <member name="F:TaskManager.Domain.Enums.TaskItemStatus.InProgress">
+            <summary>
+            The task is currently being worked on.
+            </summary>
+        </member>
+        <member name="F:TaskManager.Domain.Enums.TaskItemStatus.Completed">
+            <summary>
+            The task has been completed.
+            </summary>
+        </member>
+    </members>
+</doc>

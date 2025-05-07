@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "FUd1RH/MAnA=",
+  "success": true,
+  "projectFilePath": "C:\\wok\\FinBeatTechBackendTest\\Task1\\TaskManager.Domain\\TaskManager.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\artem\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.14\\microsoft.netcore.app.ref.8.0.14.nupkg.sha512",
+    "C:\\Users\\artem\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.14\\microsoft.windowsdesktop.app.ref.8.0.14.nupkg.sha512",
+    "C:\\Users\\artem\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.14\\microsoft.aspnetcore.app.ref.8.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

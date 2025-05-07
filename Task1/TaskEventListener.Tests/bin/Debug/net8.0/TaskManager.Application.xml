@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskManager.Application</name>
+    </assembly>
+    <members>
+        <member name="T:TaskManager.Application.DTOs.CreateTaskDto">
+            <summary>
+            DTO for creating a new task.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.CreateTaskDto.Title">
+            <summary>
+            The title of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.CreateTaskDto.Description">
+            <summary>
+            The description of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.CreateTaskDto.ItemStatus">
+            <summary>
+            The initial status of the task. Defaults to New.
+            </summary>
+        </member>
+        <member name="T:TaskManager.Application.DTOs.TaskDto">
+            <summary>
+            DTO for representing a task.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.TaskDto.Id">
+            <summary>
+            Task ID.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.TaskDto.Title">
+            <summary>
+            Task Title.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.TaskDto.Description">
+            <summary>
+            Task Description.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.TaskDto.ItemStatus">
+            <summary>
+            Task Status.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.TaskDto.CreatedAt">
+            <summary>
+            Creation timestamp (UTC).
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.TaskDto.UpdatedAt">
+            <summary>
+            Last update timestamp (UTC).
+            </summary>
+        </member>
+        <member name="T:TaskManager.Application.DTOs.UpdateTaskDto">
+            <summary>
+            DTO for updating an existing task.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.UpdateTaskDto.Title">
+            <summary>
+            The new title of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.UpdateTaskDto.Description">
+            <summary>
+            The new description of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManager.Application.DTOs.UpdateTaskDto.ItemStatus">
+            <summary>
+            The new status of the task.
+            </summary>
+        </member>
+        <member name="T:TaskManager.Application.Interfaces.IMessageProducer">
+            <summary>
+            Defines the contract for sending messages to a message broker.
+            </summary>
+        </member>
+        <member name="M:TaskManager.Application.Interfaces.IMessageProducer.SendMessageAsync(System.String,System.String,System.String)">
+            <summary>
+            Sends a message asynchronously.
+            </summary>
+            <param name="exchangeName">The target exchange name.</param>
+            <param name="routingKey">The routing key for the message.</param>
+            <param name="message">The message body (typically serialized).</param>
+            <returns>Task representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:TaskManager.Application.Interfaces.ITaskRepository">
+            <summary>
+            Defines the contract for data access operations related to tasks.
+            </summary>
+        </member>
+        <member name="M:TaskManager.Application.Interfaces.ITaskRepository.GetById(System.Int32)">
+            <summary>
+            Gets a task by its unique identifier.
+            </summary>
+            <param name="id">The task ID.</param>
+            <returns>The task item or null if not found.</returns>
+        </member>
+        <member name="M:TaskManager.Application.Interfaces.ITaskRepository.GetAll">
+            <summary>
+            Gets all tasks.
+            </summary>
+            <returns>A list of all task items.</returns>
+        </member>
+        <member name="M:TaskManager.Application.Interfaces.ITaskRepository.Create(TaskManager.Domain.Entities.TaskItem)">
+            <summary>
+            Adds a new task to the data store.
+            </summary>
+            <param name="task">The task item to add.</param>
+            <returns>The added task item with its generated ID.</returns>
+        </member>
+        <member name="M:TaskManager.Application.Interfaces.ITaskRepository.Update(TaskManager.Domain.Entities.TaskItem)">
+            <summary>
+            Updates an existing task in the data store.
+            </summary>
+            <param name="task">The task item with updated values.</param>
+            <returns>Task representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:TaskManager.Application.Interfaces.ITaskRepository.Delete(System.Int32)">
+            <summary>
+            Deletes a task by its unique identifier.
+            </summary>
+            <param name="id">The ID of the task to delete.</param>
+            <returns>True if deletion was successful, false otherwise.</returns>
+        </member>
+        <member name="T:TaskManager.Application.Interfaces.ITaskService">
+            <summary>
+            Defines the contract for task management business logic.
+            </summary>
+        </member>
+        <member name="M:TaskManager.Application.Interfaces.ITaskService.CreateTask(TaskManager.Application.DTOs.CreateTaskDto)">
+            <summary>
+            Creates a new task.
+            </summary>
+            <param name="createTaskDto">Data for the new task.</param>
+            <returns>The created task DTO.</returns>
+        </member>
+        <member name="M:TaskManager.Application.Interfaces.ITaskService.GetTaskById(System.Int32)">
+            <summary>
+            Gets a task by its ID.
+            </summary>
+            <param name="id">The task ID.</param>
+            <returns>The task DTO or null if not found.</returns>
+        </member>
+        <member name="M:TaskManager.Application.Interfaces.ITaskService.GetAllTasksAsync">
+            <summary>
+            Gets all tasks.
+            </summary>
+            <returns>A list of task DTOs.</returns>
+        </member>
+        <member name="M:TaskManager.Application.Interfaces.ITaskService.UpdateTaskAsync(System.Int32,TaskManager.Application.DTOs.UpdateTaskDto)">
+            <summary>
+            Updates an existing task.
+            </summary>
+            <param name="id">The ID of the task to update.</param>
+            <param name="updateTaskDto">The updated task data.</param>
+            <returns>True if update was successful, false if task not found.</returns>
+        </member>
+        <member name="M:TaskManager.Application.Interfaces.ITaskService.DeleteTaskAsync(System.Int32)">
+            <summary>
+            Deletes a task by its ID.
+            </summary>
+            <param name="id">The ID of the task to delete.</param>
+            <returns>True if deletion was successful, false if task not found.</returns>
+        </member>
+    </members>
+</doc>
